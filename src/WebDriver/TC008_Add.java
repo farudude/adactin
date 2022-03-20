@@ -30,17 +30,18 @@ public class TC008_Add {
 		driver.switchTo().frame("rightMenu");// entered into frame 
 		//driver.findElement(By.xpath("//input[@value='0004'][@class='checkbox']")).click();
 		driver.findElement(By.xpath("//input[@value='Add']")).click(); //find the button of add in the frame
-		driver.findElement(By.name("txtEmpFirstName")).sendKeys("Kiru");// enter the employee first name
-		driver.findElement(By.name("txtEmpLastName")).sendKeys("Lali");//enter the employee last name
+		driver.findElement(By.name("txtEmpFirstName")).sendKeys("Faru");// enter the employee first name
+		driver.findElement(By.name("txtEmpLastName")).sendKeys("mama");//enter the employee last name
 		//ADD PHOTO
 		WebElement fileInput=driver.findElement(By.xpath("//input[@type='file'][@name='photofile']"));
-				fileInput.sendKeys("F:\\pic.jpg");
+				fileInput.sendKeys("F:\\pic3.jpg");
 		
 		driver.findElement(By.id("btnEdit")).click();// click save button for saving the entered data
 		driver.switchTo().defaultContent();// exit from the frame
 		driver.navigate().back();
 		driver.findElement(By.linkText("Logout")).click();  // Click on logout link
-		//driver.quit();// close the chrome driver
+	
+		driver.quit();// close the chrome driver
 		}
 		
 		
